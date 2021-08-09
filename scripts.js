@@ -11,7 +11,7 @@ function init(){
     let downButton = document.getElementById("downB");
     let rightButton = document.getElementById("rightB");
     let leftButton = document.getElementById("leftB");
-    let shuttle = document.getElementById("shuttlePic");
+    let rocket = document.getElementById("rocket");
 
     takeOffButton.addEventListener('click', event => {
         if ( confirm('Confirm that the shuttle is ready for takeoff.') ){
@@ -45,14 +45,12 @@ function init(){
         shuttleHeight.innerHTML -= Number(10000);
     });
 
-    rightButton.addEventListener('click', event => {
-        //shuttle.style.right = 10 +'px'
-        document.getElementById("shuttlePic").style.right = '-100px'
+    rightButton.addEventListener('click', event => { 
+        rocket.style.left = parseInt(rocket.style.left) + 10 + 'px'
     });
 
     leftButton.addEventListener('click', event => {
-       //move left
-       document.getElementById("shuttlePic").style.left = '-100px'
+        rocket.style.left = parseInt(rocket.style.left) - 10 + 'px'
     });
 }    
 
